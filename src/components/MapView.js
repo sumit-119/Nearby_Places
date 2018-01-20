@@ -109,7 +109,9 @@ class MapView extends Component {
     this.state.map.panBy(0, -200);
     this.FourSquareInfo(marker);
   }
-
+     /**
+     * Retrive the location data from the foursquare api for the marker and display it in the infowindow
+     */
 
   FourSquareInfo(marker) {
     var self = this;
@@ -127,7 +129,8 @@ class MapView extends Component {
             var location_name = '<h5>Name: </h5>' + location_data.name + '<br>';
             var location_city = '<h5>City: </h5>' + location_data.location.city + '<br>';
             var location_hours = '<h5>Descriptions: </h5>' + location_data.description + '<br>';
-            self.state.infowindow.setContent(location_name + location_city + location_hours);
+var readMore = '<a href="https://foursquare.com/v/'+ location_data.id +'" target="_blank">Read More on Foursquare Website</a>'
+            self.state.infowindow.setContent(location_name + location_city + location_hours + readMore);
           });
         }
       )
@@ -152,10 +155,9 @@ class MapView extends Component {
 			return (
 				<div>
 					<MuiThemeProvider muiTheme={muiTheme}>
-						<DrawerMenu places={this.props.places}  openInfoWindow={this.openInfoWindow}
-															closeInfoWindow={this.closeInfoWindow} />
+						<DrawerMenu places={this.props.places}  openInfoWindow={this.openInfoWindow} closeInfoWindow={this.closeInfoWindow} />
 					</MuiThemeProvider>
-					<div id="mapView"/>
+					<div  id="mapView"/>
 					</div>
 			);
 	}
