@@ -1,7 +1,14 @@
 # Neighbourhood-Map-react-
 A single-page web application, built using the React framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare APIs.
 
-##  run the project in Development Mode
+## APIs used in this project
+* Google Maps API - To Display Map, Markers and InfoWindow.
+* [FourSquare API](https://developer.foursquare.com/) - To Fetch Ratings of the given locations.
+
+## Framework Used
+* React
+
+##  Run the project in Development Mode
 The project uses [Node.js >= 6.x](https://nodejs.org/en/) and the [Create-React-App starter code](https://github.com/facebookincubator/create-react-app).
 
 After Node is installed in your system, follow the below steps.
@@ -15,7 +22,7 @@ A new browser window open automatically displaying the app.
 
 ***NOTE:*** *The service workers for this app will only cache the site when it is in production mode.*
 
-## run the project in Production Mode
+## Run the project in Production Mode
 
 1. Build the production ready optimised code. `npm run build`
 2. Deploy it to `gh-pages` branch by `npm run deploy`
