@@ -55,7 +55,9 @@ var placelist = this.state.places.map(function(place, index) {
                 if (placelist === '') {
                     return (
                       <div >
-                        <TextField hintText = "Search here..."
+                        <TextField
+                        role="search"
+                        hintText = "Search here..."
                         value = {this.state.search}
                         onChange = {this.filterPlaces}/> <br/><br/>
                         <div> Sorry!No Place Found </div>
@@ -64,6 +66,7 @@ var placelist = this.state.places.map(function(place, index) {
                 } else {
                     return ( <div>
                         <TextField hintText = "Search here..."
+                            role="search"
                         value = {this.state.search}
                         onChange = {this.filterPlaces}/>
                         <List> {placelist} </List>
