@@ -52,9 +52,10 @@ var placelist = this.state.places.map(function(place, index) {
                 openInfoWindow = {this.props.openInfoWindow.bind(this)}
                 place = {place}/>)
                 ;}, this);
-                if (placelist === '') {
+                //eslint-disable-next-line
+                if (placelist == '') {
                     return (
-                      <div >
+                      <div>
                         <TextField
                         role="search"
                         hintText = "Search here..."
