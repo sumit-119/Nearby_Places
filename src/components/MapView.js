@@ -153,11 +153,11 @@ var readMore = '<a href="https://foursquare.com/v/'+ location_data.id +'" target
 
 	 render() {
 			return (
-				<div role={'map'}>
+				<div role={'container'}>
 					<MuiThemeProvider muiTheme={muiTheme}>
 						<DrawerMenu places={this.props.places}  openInfoWindow={this.openInfoWindow} closeInfoWindow={this.closeInfoWindow} />
 					</MuiThemeProvider>
-					<div  id="mapView"/>
+					<div role={'map'} id="mapView"/>
 					</div>
 			);
 	}
