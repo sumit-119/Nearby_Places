@@ -17,14 +17,16 @@ class DrawerMenu extends Component {
 
   render() {
     return (
-      <div>
+      <div role={'menu'}>
 
       <AppBar
         title="Nearby Places"
         iconClassNameRight="muidocs-icon-navigation-expand-more"
-        onLeftIconButtonTouchTap={this.handleToggle}  />
+        onLeftIconButtonTouchTap={this.handleToggle}
+        role = {'header'} />
 
       <Drawer
+      role={'drawer'}
         docked={false}
         width={300}
         open={this.state.open}

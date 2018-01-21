@@ -48,16 +48,17 @@ class PlacesList extends Component {
     render() {
 
 var placelist = this.state.places.map(function(place, index) {
-            return ( <  Place key = {index}
+            return ( <Place key = {index}
+                role={'button'}
                 openInfoWindow = {this.props.openInfoWindow.bind(this)}
                 place = {place}/>)
                 ;}, this);
                 //eslint-disable-next-line
                 if (placelist == '') {
                     return (
-                      <div>
+                      <div role={'menu'}>
                         <TextField
-                        role="search"
+                        role={'search'}
                         hintText = "Search here..."
                         value = {this.state.search}
                         onChange = {this.filterPlaces}/> <br/><br/>
@@ -65,9 +66,9 @@ var placelist = this.state.places.map(function(place, index) {
                         </div>
                     )
                 } else {
-                    return ( <div>
+                    return ( <div role={'menu'}>
                         <TextField hintText = "Search here..."
-                            role="search"
+                            role={'search'}
                         value = {this.state.search}
                         onChange = {this.filterPlaces}/>
                         <List> {placelist} </List>
