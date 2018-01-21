@@ -26,7 +26,7 @@ class App extends Component {
   });
   render() {
     return ( <main className = "App" role={'application'} >
-      <MapView places = {places} role={'map'}/> 
+      <MapView places = {places} role={'container'}/> 
             </main >
     );
   }
