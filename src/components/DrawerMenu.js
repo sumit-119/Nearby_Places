@@ -31,7 +31,7 @@ class DrawerMenu extends Component {
         width={300}
         open={this.state.open}
         onRequestChange={(open) => this.setState({open})}>
-          <div className="search">
+          <div className="search" role={'Search'}>
         <p style={{marginTop:40,color: '#ffa000',fontSize:'2.5rem',textAlign: 'center',}}>Search</p>
         <PlaceList places={this.props.places} openInfoWindow={this.props.openInfoWindow}
                           closeInfoWindow={this.props.closeInfoWindow}/>
