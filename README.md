@@ -1,6 +1,6 @@
-# Neighbourhood-Map-react-
+# Neighbourhood-Map-react
 A single-page web application, built using the React framework, that displays a Google Map of an area and various points of interest. Users can search all included landmarks and, when selected, additional information about a landmark is presented from the FourSquare APIs.
-
+You can view live demo [here].(https://nearby-places23.herokuapp.com/)
 ## APIs used in this project
 * Google Maps API - To Display Map, Markers and InfoWindow.
 * [FourSquare API](https://developer.foursquare.com/) - To Fetch Ratings of the given locations.
